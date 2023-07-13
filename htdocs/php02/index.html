@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="EbinaKai">
+    <title>学生テーブル</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../CSSsample.css">
+</head>
+<body>
+  <h2>学生テーブル</h2>
+  <h3>表示</h3>
+  <p>
+    <a href="disp_gakusei_t.php">学生テーブルの表示</a>
+  </p>
+
+  <h3>追加</h3>
+  <p>
+    <form action="ins_gakusei_t.php" method="post">
+      氏名：
+      <input type="text" name="shimei" size="20">
+      <input type="submit" value="追加">
+    </form>
+  </p>
+
+  <h3>削除</h3>
+  <p>
+    <form action="del_gakusei_t.php" method="post">
+      ID：
+      <input type="text" name="id" size="20">
+      <input type="submit" value="削除">
+    </form>
+  </p>
+
+  <h3>変更</h3>
+  <p>
+    <form action="update_gakusei_t.php" method="post">
+      ID：
+      <input type="text" name="id" size="20">
+      氏名：
+      <input type="text" name="shimei" size="20">
+      <input type="submit" value="変更">
+    </form>
+  </p>
+
+
+</body>
+</html>

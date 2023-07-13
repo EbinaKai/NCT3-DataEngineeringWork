@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  php:
+    build: ./php
+    volumes:
+      - ./htdocs:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql
+
+  mysql:
+    platform: linux/amd64
+    image: mysql:8.0.26
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db
+      
+  phpmyadmin:
+    image: phpmyadmin:latest
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    volumes:
+      - ./phpmyadmin/phpmyadmin-misc.ini:/usr/local/etc/php/conf.d/phpmyadmin-misc.ini
+    depends_on:
+      - mysql
+    ports:
+      - 8081:80
