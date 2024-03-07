@@ -1,4 +1,5 @@
 # NctDataEngineeringWork  
+   高専3年時のデータ工学で行ったデータベースの操作に関する演習です。
 
 ## 1. DockerDesktopのインストール  
    Dockerでの環境構築をしよう。Dockerをコマンドラインからインストールしてもいいが、MacやWindowの場合はDockerDesktopをインストールするのがいちばん簡単だと思います。[こちら](https://www.docker.com/products/docker-desktop/)からダウンロードすることが出来る。各環境でのDockerDesktopのセットアップについては各自調べてもらうといいと思う。
